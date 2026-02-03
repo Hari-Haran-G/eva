@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.subtitle {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.photo {
+  width: 170px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.photo:nth-child(2) { animation-delay: 0.8s; }
+.photo:nth-child(3) { animation-delay: 1.6s; }
+.photo:nth-child(4) { animation-delay: 2.4s; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.message p {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+.question {
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#yesBtn {
+  background: #ff0033;
+  color: white;
+}
+
+#noBtn {
+  background: white;
+  color: #ff0033;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+#finalMessage {
+  margin-top: 30px;
+  color: #fff;
+}
